@@ -274,6 +274,5 @@
 	{"type": "Feature", "tag": "zlm", "geometry": { "type": "Point", "coordinates": [105.0, -4.0]} } 
 ,
 	{"type": "Feature", "tag": "zul", "geometry": { "type": "Point", "coordinates": [31.3, -28.1]} } 
-,
 ]
 }
