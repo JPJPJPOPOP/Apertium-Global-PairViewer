@@ -204,8 +204,6 @@ function ready(error, world, places, points) {
         .attr("markerHeight", MARKER_SIZE)
         .attr("orient", "auto")
         .style("fill", TRUNK_COLOR)
-        .style("stroke", "black")
-        .style("stroke-width", "0.3px")
       .append("path")
         .attr("d", "M 1 1 L 3 2 L 1 3 Z");
   markerDef.append("marker")
@@ -218,8 +216,6 @@ function ready(error, world, places, points) {
         .attr("markerHeight", MARKER_SIZE)
         .attr("orient", "auto")
         .style("fill", TRUNK_COLOR)
-        .style("stroke", "black")
-        .style("stroke-width", "0.3px")
       .append("path")
         .attr("d", "M0 2 L 2 1 L 2 3 L 0 2 M 2.5 1 L 4.5 2 L 2.5 3 L 2.5 1");
   markerDef.append("marker")
@@ -232,8 +228,6 @@ function ready(error, world, places, points) {
         .attr("markerHeight", MARKER_SIZE)
         .attr("orient", "auto")
         .style("fill", STAGING_COLOR)
-        .style("stroke", "black")
-        .style("stroke-width", "0.3px")
       .append("path")
         .attr("d", "M 1 1 L 3 2 L 1 3 Z");
   markerDef.append("marker")
@@ -246,8 +240,6 @@ function ready(error, world, places, points) {
         .attr("markerHeight", MARKER_SIZE)
         .attr("orient", "auto")
         .style("fill", STAGING_COLOR)
-        .style("stroke", "black")
-        .style("stroke-width", "0.3px")
       .append("path")
         .attr("d", "M0 2 L 2 1 L 2 3 L 0 2 M 2.5 1 L 4.5 2 L 2.5 3 L 2.5 1");
   markerDef.append("marker")
@@ -260,8 +252,6 @@ function ready(error, world, places, points) {
         .attr("markerHeight", MARKER_SIZE)
         .attr("orient", "auto")
         .style("fill", NURSERY_COLOR)
-        .style("stroke", "black")
-        .style("stroke-width", "0.3px")
       .append("path")
         .attr("d", "M 1 1 L 3 2 L 1 3 Z");
   markerDef.append("marker")
@@ -274,8 +264,6 @@ function ready(error, world, places, points) {
         .attr("markerHeight", MARKER_SIZE)
         .attr("orient", "auto")
         .style("fill", NURSERY_COLOR)
-        .style("stroke", "black")
-        .style("stroke-width", "0.3px")
       .append("path")
         .attr("d", "M0 2 L 2 1 L 2 3 L 0 2 M 2.5 1 L 4.5 2 L 2.5 3 L 2.5 1");
   markerDef.append("marker")
@@ -288,8 +276,6 @@ function ready(error, world, places, points) {
         .attr("markerHeight", MARKER_SIZE)
         .attr("orient", "auto")
         .style("fill", INCUBATOR_COLOR)
-        .style("stroke", "black")
-        .style("stroke-width", "0.3px")
       .append("path")
         .attr("d", "M 1 1 L 3 2 L 1 3 Z");
   markerDef.append("marker")
@@ -302,8 +288,6 @@ function ready(error, world, places, points) {
         .attr("markerHeight", MARKER_SIZE)
         .attr("orient", "auto")
         .style("fill", INCUBATOR_COLOR)
-        .style("stroke", "black")
-        .style("stroke-width", "0.3px")
       .append("path")
         .attr("d", "M0 2 L 2 1 L 2 3 L 0 2 M 2.5 1 L 4.5 2 L 2.5 3 L 2.5 1");
 
