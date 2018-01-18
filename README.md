@@ -33,12 +33,15 @@ To add or modify point data, change the apertiumPairs.json file.
 * world-110m.json -- Country data used for generating the globe
 
 ## Scraping Data For Pairs:
-* First, run [this program](https://svn.code.sf.net/p/apertium/svn/trunk/apertium-tools/get_all_lang_pairs.py) in terminal.
+1) Scrape new data for the pairs.
+
+  * For Mac:
 ```
-$ python3 <path_to_file>/get_all_lang_pairs.py > pairs.txt
+$ curl https://svn.code.sf.net/p/apertium/svn/trunk/apertium-tools/get_all_lang_pairs.py -o get_all_lang_pairs.py
+$ python3 get_all_lang_pairs.py > pairs.txt
 ```
 
-* This should create a new file called `pairs.txt` and fill it with a list of pairs. This step might take a while (5-10 minutes maybe). In the end, `pairs.txt` should look something like this:
+  * This should create a new file called `pairs.txt` and fill it with a list of pairs. This step might take a while (5-10 minutes maybe). In the end, `pairs.txt` should look something like this:
 ```
 {'lg1': 'af', 'lg2': 'nl', 'last_updated': '2016-07-23', 'created': '2007-09-24', 'direction': '<>', 'repo': 'trunk', 'stems': 6263}
 {'lg1': 'arg', 'lg2': 'cat', 'last_updated': '2017-10-27', 'created': '2016-01-04', 'direction': '<>', 'repo': 'trunk', 'stems': 24267}
@@ -51,22 +54,23 @@ $ python3 <path_to_file>/get_all_lang_pairs.py > pairs.txt
 ...
 ```
 
-* Run [this program](https://raw.githubusercontent.com/jonorthwash/Apertium-Global-PairViewer/master/formatpairs.py) to format it the `pairs.txt` file. This should generate a new file `formattedpairs.txt` that contains the formatted pairs. Note: you should be running `formatpairs.py` in the same directory as `pairs.txt`.
+2) Format `pairs.txt`.
 
-For Mac:
+  * For Mac:
 ```
-curl https://raw.githubusercontent.com/jonorthwash/Apertium-Global-PairViewer/master/formatpairs.py -o formatpairs.py && python3 formatpairs.py
-```
-
-* The next few steps assume that you have already cloned the repository.
-
-```
-cd Apertium-Global-PairViewer
-cp <path_to_file>/formattedpairs.txt pairs.txt.json
-python3 trimpairs.py
+$ curl https://raw.githubusercontent.com/jonorthwash/Apertium-Global-PairViewer/master/formatpairs.py -o formatpairs.py
+$ python3 formatpairs.py
 ```
 
-* `apertiumPairs.json` and `apertiumPoints.json` should be repopulated with the new data.
+3) The next few steps assume that you have already cloned the repository.
+
+```
+$ cd Apertium-Global-PairViewer
+$ cp <path_to_file>/formattedpairs.txt pairs.txt.json
+$ python3 trimpairs.py
+```
+
+  * `apertiumPairs.json` and `apertiumPoints.json` should be repopulated with the new data.
 
 ## More:
 To learn more about the project, you can look at the wiki page https://wikis.swarthmore.edu/ling073/User:Cpillsb1/Final_project
