@@ -1,17 +1,18 @@
 """
-This python script takes the pairs from pairs.txt and formats them in the following way:
-- Replaces single quotes with double quotes
-- Adds commas at the end of each line
-- Adds [] around it
+This python script takes the pairs from pairs.txt and formats them in json format
 """
+
+import json
+import ast
 
 if __name__ == "__main__":
     pairsFile = open("pairs.txt", "r")
     lines = pairsFile.readlines()
+    jsonlist = list()
+    for line in lines:
+        jsonlist.append(ast.literal_eval(line.rstrip()))
+    print(jsonlist)
     formattedPairsFile = open("formattedpairs.txt", "w")
-    formattedPairsFile.write("[")
-    for line in lines[:-1]:
-        formattedPairsFile.write(str(line).strip().replace("'", '"') + ",\n")
-    formattedPairsFile.write(str(lines[-1]).strip().replace("'", '"') + "]")
+    formattedPairsFile.write(json.dumps(jsonlist))
     formattedPairsFile.close()
     pairsFile.close()

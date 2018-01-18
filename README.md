@@ -41,7 +41,7 @@ To add or modify point data, change the apertiumPairs.json file.
     $ python3 get_all_lang_pairs.py > pairs.txt
     ```
 
-    * This should create a new file called `pairs.txt` and fill it with a list of pairs. This step might take a while (5-10 minutes maybe). In the end, `pairs.txt` should look something like this:
+    * This should create a new file called `pairs.txt` and fill it with a list of pairs. This step might take a while (around 5-10 minutes). In the end, `pairs.txt` should look something like this:
     ```
     {'lg1': 'af', 'lg2': 'nl', 'last_updated': '2016-07-23', 'created': '2007-09-24', 'direction': '<>', 'repo': 'trunk', 'stems': 6263}
     {'lg1': 'arg', 'lg2': 'cat', 'last_updated': '2017-10-27', 'created': '2016-01-04', 'direction': '<>', 'repo': 'trunk', 'stems': 24267}
